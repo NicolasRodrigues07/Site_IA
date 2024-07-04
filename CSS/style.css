@@ -1,3 +1,36 @@
-ul {
-    list-style-type: none;
+/*escrever oque vai ser usado na pg principal e oque vai ser padrão nas pgs*/
+body {
+    display: grid;
 }
+
+header {
+    background-color: #1abc9c;
+    padding: 20px ;
+}
+
+.container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo {
+    flex: 1; 
+}
+
+.links {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.links li {
+    display: inline; /* Coloca os itens da lista em linha */
+    margin-right: 20px; 
+}
+
+.gpt {
+    flex: 1;
+    text-align: right;
+}
+
