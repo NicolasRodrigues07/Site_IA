@@ -10,15 +10,49 @@ header {
     margin-bottom: 4%;
 }
 
+/* Logo Styles */
 .logo {
-    font-size: large; /* Aumenta um pouco o tamanho do logo */
+    width: 4%; /* Define o tamanho para a logo */
 }
 
-.container {
-    display: flex; 
-    margin: 0 auto;
-    justify-content: space-between; 
-    align-items: center;    
+.logo img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do contêiner .logo */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+}
+
+/* Button Styles */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button img {
+    width: 100%;
+    height: auto;
+    border-radius: inherit; /* Herda o border-radius do botão */
+    transition: all 0.4s;
+}
+
+button img:hover {
+    width: 120%;
+    height: auto;
+    border-radius: inherit; /* Herda o border-radius do botão */
+}
+
+/* Links Styles */
+.links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.links li {
+    display: inline;
+    margin-right: 20px;
 }
 
 .links a {
@@ -36,25 +70,18 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Intensifica a sombra ao passar o mouse */
 }
 
-.logo {
-    flex: 1; 
-}
-
-.links {
-    list-style-type: none; 
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.links li {
-    display: inline; /* Coloca os itens da lista em linha */
-    margin-right: 20px; 
-}
-
+/* Alignment Styles */
 .gpt {
     flex: 1;
     text-align: right;
+}
+
+
+.container {
+    display: flex; 
+    margin: 0 auto;
+    justify-content: space-between; 
+    align-items: center;
 }
 
 main {
@@ -74,6 +101,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
 }
+
 
 
 
