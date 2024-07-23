@@ -6,6 +6,7 @@ body {
 header {
     background-color: #1abc9c;
     padding: 20px ;
+    margin-bottom: 4%;
 }
 
 .container {
@@ -33,4 +34,25 @@ header {
     flex: 1;
     text-align: right;
 }
+
+main {
+    display: flex;
+    justify-content:space-around;
+}
+
+.noticias {
+    margin: 2%;
+    height: 150%;
+    width: 15%;
+    padding: 2%;
+    background-color: rgb(218, 255, 243);
+    border-radius: 3%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
 
