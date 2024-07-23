@@ -1,6 +1,7 @@
 /*escrever oque vai ser usado na pg principal e oque vai ser padrão nas pgs*/
 body {
     display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -9,10 +10,30 @@ header {
     margin-bottom: 4%;
 }
 
+.logo {
+    font-size: large; /* Aumenta um pouco o tamanho do logo */
+}
+
 .container {
     display: flex; 
+    margin: 0 auto;
     justify-content: space-between; 
-    align-items: center; 
+    align-items: center;    
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.links a:hover {
+    border-color: #fff; /* Muda a cor da borda ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Intensifica a sombra ao passar o mouse */
 }
 
 .logo {
@@ -23,6 +44,7 @@ header {
     list-style-type: none; 
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 .links li {
