@@ -86,23 +86,76 @@ button img:hover {
 
 main {
     display: flex;
-    justify-content:space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1%; /* Espaçamento entre os itens */
+    width: 100%; /* Ajuste conforme necessário para caber no layout */
+    margin: 0 auto; /* Centraliza o conteúdo principal */
 }
 
 .noticias {
-    margin: 2%;
-    height: 150%;
-    width: 15%;
-    padding: 2%;
-    background-color: rgb(239, 255, 250);
+    flex: 1 1 calc(24% - 2%); /* Cada .noticias ocupa cerca de 30% da largura da linha, menos o espaçamento */
+    margin: 0 2%;
+    margin-bottom: 2%; /* Espaçamento vertical entre os itens */
+    padding: 1%;
+    height: auto;
+    background-color: rgb(218, 255, 243);
     border-radius: 3%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: right;
+    justify-content: space-between; /* Ajusta o conteúdo para distribuir o espaço */
+    align-items: stretch; /* Faz com que os itens ocupem toda a largura disponível */
+    position: relative; /* Mantém o posicionamento relativo para o link se mover corretamente */
 }
 
+.texto_noticias {
+    flex: 1;
+    display: flex;
+    margin-top: 5%;
+    align-items: end; /* Alinha verticalmente o texto */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    text-align: left; 
+    
+}
 
+img {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
 
+.noticias img {
+    align-items: center;
+    max-width: 390px;
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorcer */
+}
 
+.noticias a {
+    margin-top: 10%;
+    width: 25%;
+    color: #090404;
+    background-color: aquamarine;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    transition: all 0.3s;
+    bottom: 10%; /* Alinha o link no fundo da caixa */
+    left: 0; /* Alinha o link à esquerda da caixa */
+    transform: translateX(0); /* Remove qualquer deslocamento inicial */
+}
 
+.noticias a:hover {
+    width: 28%;
+    font-size: large;
+    transform: translateX(5%) translateY(-5px); /* Move o link para cima ao passar o mouse */
+    border-color: #fff; /* Muda a cor da borda ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Intensifica a sombra ao passar o mouse */
+}
