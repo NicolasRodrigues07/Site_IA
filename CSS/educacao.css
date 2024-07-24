@@ -9,6 +9,7 @@
 main {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .flexbox1, .flexbox2 {
@@ -23,7 +24,6 @@ main {
 footer {
     background-color: #1abc9c;
     padding: 10px;
-    text-align: center;
     color: white;
 }
 
@@ -38,4 +38,51 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.relacionados {
+    flex: 1; /* Faz com que o aside ocupe menos espaço */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+    align-items: center;
+    text-align: center;
+}
+
+.relacionados ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.relacionados li {
+    margin-bottom: 20px;
+    font-size: smaller;
+    align-items: center;
+}
+
+.relacionados li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.relacionados li img,
+.relacionados li iframe {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.relacionados img {
+    min-height: 130px;
+    max-height: 130px;
+    min-width: 270px;
+    max-width: 270px;
 }
