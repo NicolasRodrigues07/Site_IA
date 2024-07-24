@@ -105,7 +105,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: right;
+    
     justify-content: space-between; /* Ajusta o conteúdo para distribuir o espaço */
     align-items: stretch; /* Faz com que os itens ocupem toda a largura disponível */
     position: relative; /* Mantém o posicionamento relativo para o link se mover corretamente */
@@ -129,7 +129,6 @@ img {
 
 .noticias img {
     align-items: center;
-    max-width: 390px;
     width: 100%;
     min-height: 250px;
     max-height: 250px;
@@ -142,6 +141,7 @@ img {
     color: #090404;
     background-color: aquamarine;
     text-decoration: none;
+    text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
     padding: 5px 10px;
     border-radius: 4px;
@@ -154,8 +154,98 @@ img {
 
 .noticias a:hover {
     width: 28%;
-    font-size: large;
-    transform: translateX(5%) translateY(-5px); /* Move o link para cima ao passar o mouse */
+    height: auto;
     border-color: #fff; /* Muda a cor da borda ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Intensifica a sombra ao passar o mouse */
 }
+
+@media (max-width: 768px) {
+
+
+
+    .logo img {
+        width: 80%; /* Ajusta o tamanho da imagem da logo */
+    }
+
+    .logo {
+        width: 8%; /* Ajusta o tamanho da logo em telas menores */
+        }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .noticias {
+        flex: 1 1 100%; /* Faz com que as notícias ocupem 100% da largura disponível */
+        margin: 0 0 2%; /* Ajusta a margem para tela menor */
+        padding: 2%;
+        border-radius: 2%;
+    }
+
+    .texto_noticias {
+        margin-top: 2%;
+        font-size: 14px; /* Ajusta o tamanho da fonte do texto das notícias */
+    }
+
+    .noticias img {
+        min-height: 200px;
+        max-height: 200px;
+    }
+
+    .noticias a {
+        margin-top: 5%;
+        width: 50%;
+        font-size: 14px; /* Ajusta o tamanho da fonte do link */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 12%; /* Ajusta ainda mais o tamanho da logo em telas muito pequenas */
+    }
+
+    .logo img {
+        width: 60%; /* Ajusta o tamanho da imagem da logo */
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links li {
+        margin-bottom: 5px;
+    }
+
+    .noticias {
+        flex: 1 1 100%; /* Faz com que as notícias ocupem 100% da largura disponível */
+        margin: 0 0 5%; /* Ajusta a margem para tela menor */
+        padding: 2%;
+        border-radius: 2%;
+    }
+
+    .texto_noticias {
+        margin-top: 2%;
+        font-size: 12px; /* Ajusta o tamanho da fonte do texto das notícias */
+    }
+
+    .noticias img {
+        min-height: 150px;
+        max-height: 150px;
+    }
+
+    .noticias a {
+        margin-top: 5%;
+        width: 70%;
+        font-size: 12px; /* Ajusta o tamanho da fonte do link */
+    }
+}
+
+/*css para o pop up*/
+
