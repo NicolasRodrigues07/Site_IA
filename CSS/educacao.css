@@ -1,11 +1,10 @@
-/* Estilo geral da página de educação */
-
 body {
     line-height: 1.6;
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin: 0;
     font-family: "Playwrite México", sans-serif;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos toda a altura da janela */
 }
 
 main {
@@ -17,6 +16,7 @@ main {
     margin: 0 auto; /* Centraliza o conteúdo principal */
     width: 100%; /* Ajusta a largura do main */
     max-width: 1200px; /* Limita a largura máxima */
+    flex: 1; /* Garante que o main ocupe o espaço disponível */
 }
 
 .flexbox1, .flexbox2 {
@@ -26,6 +26,7 @@ main {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Ajuste para limitar o tamanho máximo */
 }
 
 aside {
@@ -35,6 +36,8 @@ aside {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    height: fit-content; /* Ajusta a altura do aside */
+    max-width: 600px; /* Ajuste para limitar o tamanho máximo */
 }
 
 .noticias {
@@ -47,26 +50,23 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-
-.flexbox1, .flexbox2 {
-    flex: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px; /* Ajuste para limitar o tamanho máximo */
     margin: 10px;
 }
 
-aside {
+.relacionados {
     background-color: #fff;
+    margin: auto 0;
     padding: 20px;
     border-radius: 8px;
+    padding: auto 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Ajuste para limitar o tamanho máximo */
-    margin: 20px;
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: fit-content; /* Ajusta a altura do aside */
 }
 
 .relacionados ul {
@@ -76,8 +76,20 @@ aside {
 }
 
 .relacionados li {
+    border-radius: 10%;
+    padding: 10px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: smaller;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+
+.relacionados li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .relacionados a {
@@ -86,11 +98,17 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: smaller;
 }
 
 .relacionados img {
+    display: block;
+    width: 70%;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 130px;
+    max-width: 280px;
 }
 
 footer {
@@ -98,19 +116,27 @@ footer {
     padding: 10px;
     color: white;
     text-align: center;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
-    .noticias {
-        flex-direction: column;
+    main {
+        flex-direction: column; /* Altera a direção para coluna em telas menores */
         align-items: center;
     }
 
     .flexbox1, .flexbox2 {
         max-width: 90%;
+        flex: 1 1 100%; /* Faz com que ocupem toda a largura disponível */
     }
 
     aside {
         max-width: 90%;
+        flex: 1 1 100%; /* Faz com que ocupe toda a largura disponível */
+    }
+
+    .noticias {
+        max-width: 90%;
+        flex: 1 1 100%; /* Faz com que ocupem toda a largura disponível */
     }
 }
