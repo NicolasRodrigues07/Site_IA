@@ -1,16 +1,19 @@
 body {
+    line-height: 1;
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin: 0;
     font-family: "Playwrite México", sans-serif;
 }
 
+
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px; /* Espaçamento maior entre os elementos */
-    padding: 20px; /* Espaçamento interno */
+    padding: 20px 0; /* Espaçamento interno */
 }
 
 .container {
@@ -18,6 +21,7 @@ main {
     width: 100%;
     max-width: 1200px; /* Limita a largura máxima */
     gap: 20px; /* Espaçamento entre as colunas */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 .info {
@@ -66,20 +70,18 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
-    align-items: center;
+    width: 100%;
 }
 
 .relacionados li {
     margin-bottom: 20px;
     font-size: smaller;
-    align-items: center;
 }
 
 .relacionados li a {
     text-decoration: none;
     color: #333;
     display: block;
-    text-align: center;
     margin-top: 10px;
 }
 
@@ -97,3 +99,16 @@ main {
     min-width: 370px;
     max-width: 370px;
 }
+
+footer {
+    background-color: #1abc9c;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    bottom: 0;
+}
+
